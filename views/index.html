@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banana Shop</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="favicon_io/favicon-16x16.png">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header class="bg-warning py-3 text-center shadow">
+        <h1 class="text-white animate__animated animate__fadeInDown">Welcome to Banana Shop!</h1>
+        <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <button id="home-button" class="btn btn-link nav-link text-white hover-underline-animation">
+                                Home
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="products-button"
+                                class="btn btn-link nav-link text-white hover-underline-animation">
+                                Products
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="product-details-button"
+                                class="btn btn-link nav-link text-white hover-underline-animation">
+                                Product Details
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="cart-button" class="btn btn-link nav-link text-white hover-underline-animation">
+                                Cart
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="checkout-button"
+                                class="btn btn-link nav-link text-white hover-underline-animation">
+                                Checkout
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button id="account-button"
+                                class="btn btn-link nav-link text-white hover-underline-animation">
+                                Account
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="featured-products container my-5">
+        <h2 class="text-center mb-4">Promotion Bananas</h2>
+        <div class="row">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <img src="/picture/CavendishBananas.jpg" class="card-img-top" alt="Cavendish Banana">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Buy 1 Get 1 Free</h5>
+                        <p class="card-text">Purchase 1 Cavendish Banana and get another one for free!</p>
+                        <button class="btn btn-warning btn-custom text-white show-now" data-id="1" data-name="Cavendish Banana"
+                            data-price="1.00">Show Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <img src="picture/LadyFingerBanana.jpg" class="card-img-top" alt="Pisang Awak banana">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">20% Off</h5>
+                        <p class="card-text">Get 20% off on Lady Finger Banana for this week only!</p>
+                        <button class="btn btn-warning btn-custom text-white show-now" data-id="2" data-name="Golden Banana"
+                        data-price="4.00">Show Now</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow-sm h-100">
+                    <img src="picture/GoldenCavendishBanana.jpg" class="card-img-top" alt="Golden Banana">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Free Shipping</h5>
+                        <p class="card-text">Free shipping for orders above $10 on Golden Bananas!</p>
+                        <button class="btn btn-warning btn-custom text-white show-now" data-id="67616d7cb8e83a6eb26b65f7" data-name="Golden Banana"
+                            data-price="4.00">Show Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel for Image Slider -->
+    <h2 class="text-center mb-4">Recommended Products</h2>
+    <div id="bananaCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <img src="picture/CavendishBananas.jpg" class="d-block w-100" alt="Cavendish Banana">
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <img src="picture/LadyFingerBanana.jpg" class="d-block w-100" alt="Lady Finger Banana">
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <img src="picture/GoldenCavendishBanana.jpg" class="d-block w-100" alt="Golden Banana">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#bananaCarousel" data-bs-slide="prev">
+            <span class="fas fa-chevron-left" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#bananaCarousel" data-bs-slide="next">
+            <span class="fas fa-chevron-right" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <footer class="bg-warning text-white text-center py-3">
+        <p>&copy; 2024 Banana Shop. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/Controller.js"></script>
+    <script src="js/shownow.js"></script>
+    <script src="js/scripts.js"></script>
+
+
+</body>
+</html>
